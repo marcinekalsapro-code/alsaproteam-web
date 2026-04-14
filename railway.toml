@@ -1,0 +1,19 @@
+# Frontend Service
+[[services]]
+name = "frontend"
+rootDirectory = "frontend"
+buildCommand = "yarn install && yarn build"
+startCommand = "yarn start"
+
+[[services.env]]
+PORT = "3000"
+
+# Backend Service  
+[[services]]
+name = "backend"
+rootDirectory = "backend"
+buildCommand = "pip install -r requirements.txt"
+startCommand = "uvicorn server:app --host 0.0.0.0 --port 8001"
+
+[[services.env]]
+PORT = "8001"

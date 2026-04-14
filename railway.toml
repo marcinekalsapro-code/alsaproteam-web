@@ -13,7 +13,4 @@ PORT = "3000"
 name = "backend"
 rootDirectory = "backend"
 buildCommand = "pip install -r requirements.txt"
-startCommand = "uvicorn server:app --host 0.0.0.0 --port 8001"
-
-[[services.env]]
-PORT = "8001"
+startCommand = "uvicorn server:app --host 0.0.0.0 --port $PORT"
